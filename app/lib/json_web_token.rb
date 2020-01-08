@@ -9,7 +9,9 @@ class JsonWebToken
                algorithm: 'RS256',
                iss: 'https://react-rails-demo.auth0.com/',
                verify_iss: true,
-               aud: Rails.application.secrets.auth0_api_audience,
+               # Old way
+               # aud: Rails.application.secrets.auth0_api_audience,
+               aud: Rails.application.credentials[:auth0][:api_audience],
                verify_aud: true) do |header|
       jwks_hash[header['kid']]
     end
