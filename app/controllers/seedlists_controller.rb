@@ -1,4 +1,6 @@
 class SeedlistsController < ApplicationController
+  include Secured
+
   before_action :set_seedlist, only: [:show, :update, :destroy]
 
   # GET /seedlists
