@@ -1,0 +1,2 @@
+class Seedlist < ApplicationRecord
+end
