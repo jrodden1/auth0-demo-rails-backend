@@ -7,9 +7,12 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 
+# Set the default host to 0.0.0.0 so that other computers on my network can ping the API
+set_default_host '0.0.0.0' # Note: Must come BEFORE defining the port
+
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-port        ENV.fetch("PORT") { 3000 }
+port        ENV.fetch("PORT") { 3001 }
 
 # Specifies the `environment` that Puma will run in.
 #
