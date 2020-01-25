@@ -6,7 +6,7 @@ class SeedlistsController < ApplicationController
   # GET /seedlists
   def index
     @seedlists = Seedlist.all
-
+    binding.pry
     render json: @seedlists
   end
 
